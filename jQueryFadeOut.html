@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Jquery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style>
+			.circle{
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: green;
+				margin: 10px;
+			}
+			
+			.square{
+				width: 150px;
+				height: 150px;
+				background-color: red;
+				margin: 10px;			
+			}
+		</style>	
+	</head>
+	
+	<body>		
+		<div class="circle"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		
+		<script type="text/javascript">
+
+			//jQuery click
+			$("div").click(function(){
+				//jQuery fa sparire un componente usando this
+				//come riferimento all'elemento che riceve il click
+				$(this).fadeOut();
+			});
+		
+		</script>	
+	</body>
+</html>
