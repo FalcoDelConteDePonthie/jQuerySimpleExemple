@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Jquery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<style type="text/css">
+
+			
+		</style>	
+	</head>
+	
+	<body>		
+
+		<label for="lname">Testo in cui cercare:</label><input id="testo" type="text"> 
+		<br>
+		<br>
+		<label for="lname">Parola da cercare:</label><input id="parola" type="text">
+		<br><br>
+		<button id="contr">controlla</button>
+		<script type="text/javascript">
+			document.getElementById("contr").onclick =function(){
+				var regex = new RegExp(document.getElementById("parola").value, 'g' );
+				var string = document.getElementById("testo").value;
+				var result = string.match(regex);
+				if(result === null)
+				{
+					alert("Parola non trovata!");
+				}
+				else{
+					alert("Trovato: "+result);
+				}
+				
+			}		
+		</script>	
+	</body>
+</html>
